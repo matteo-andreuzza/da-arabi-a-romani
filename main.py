@@ -72,42 +72,45 @@ while True:
             return("MM")
         elif n == 3:
             return("MMM")
-    num = list(str(arabo))
-    al = len(num)
-    if al == 4:   
-        u = int(num[3])
-        d = int(num[2])
-        c = int(num[1])
-        m = int(num[0])
-        #if u > 0:
-        ciao = unita(u)
-        #if d > 0:
-        ciaa = decine(d)
-        #if c > 0:
-        ciae = centinaia(c)
-        #if m > 0:ù
-        ciai = migliaia(m)
-        print(str(ciai) + str(ciae) + str(ciaa) + str(ciao))
-    elif al == 3:
-        u = int(num[2])
-        d = int(num[1])
-        c = int(num[0])
-        ciao = unita(u)
-        #if d > 0:
-        ciaa = decine(d)
-        #if c > 0:
-        ciae = centinaia(c)
-        #if m > 0:ù
-        print(str(ciae) + str(ciaa) + str(ciao))
-    elif al == 2:
-        u = int(num[1])
-        d = int(num[0])
-        ciao = unita(u)
-        #if d > 0:
-        ciaa = decine(d)
-        #if c > 0:
-        print(str(ciaa) + str(ciao))
-    elif al == 1:
-        u = int(num[0])
-        ciao = unita(u)
-        print(str(ciao))
+    if arabo < 4000:
+        num = list(str(arabo))
+        al = len(num)
+        if al == 4:   
+            u = int(num[3])
+            d = int(num[2])
+            c = int(num[1])
+            m = int(num[0])
+            #if u > 0:
+            ciao = unita(u)
+            #if d > 0:
+            ciaa = decine(d)
+            #if c > 0:
+            ciae = centinaia(c)
+            #if m > 0:ù
+            ciai = migliaia(m)
+            print(str(ciai) + str(ciae) + str(ciaa) + str(ciao))
+        elif al == 3:
+            u = int(num[2])
+            d = int(num[1])
+            c = int(num[0])
+            ciao = unita(u)
+            #if d > 0:
+            ciaa = decine(d)
+            #if c > 0:
+            ciae = centinaia(c)
+            #if m > 0:ù
+            print(str(ciae) + str(ciaa) + str(ciao))
+        elif al == 2:
+            u = int(num[1])
+            d = int(num[0])
+            ciao = unita(u)
+            #if d > 0:
+            ciaa = decine(d)
+            #if c > 0:
+            print(str(ciaa) + str(ciao))
+        elif al == 1:
+            u = int(num[0])
+            ciao = unita(u)
+            print(str(ciao))
+    else:
+        print("i numeri romani possono essere generati correttamente solo fino a 3999, in una prossima versione forse riusciremo ad andare oltre")
